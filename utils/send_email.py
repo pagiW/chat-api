@@ -21,7 +21,7 @@ def send_email_signin(email, token):
             smtp.login(os.getenv('APP_EMAIL'), os.getenv('APP_PASSWORD'))
             smtp.sendmail(os.getenv('APP_EMAIL'), email, em.as_string())
         return {
-            'message': 'confirma tu registro en tu correo',
+            'message': 'confirma tu registro, inicio de sesión o cambio de contraseña en tu correo electrónico',
             'status': 202
         }
     except:
